@@ -13,7 +13,7 @@ class Session(Document):
 @frappe.whitelist()
 def make_payment(source_name, target_doc=None):
 	doc = get_mapped_doc("Session", source_name,	{
-		"DC": {
+		"Session": {
 			"doctype": "Payment",
 			"field_map": {
 				"name": "session_doc",
